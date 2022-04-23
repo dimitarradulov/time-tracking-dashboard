@@ -1,80 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
 
-  Report for
-  Jeremy Robson
+    <link rel="stylesheet" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-container">
+        <div class="person-card">
+          <div class="person-card__intro">
+            <img src="./images/image-jeremy.png" alt="Person avatar" />
+            <p class="person-card__subtitle">Report for</p>
+            <h2 class="card-title">Jeremy Robson</h2>
+          </div>
+          <ul class="person-card__select">
+            <li class="person-card__option">Daily</li>
+            <li class="person-card__option person-card__option--active">
+              Weekly
+            </li>
+            <li class="person-card__option">Monthly</li>
+          </ul>
+        </div>
+        <div class="card card--work">
+          <div class="card__content">
+            <div class="card__activity">
+              <p class="card__activity-title">Work</p>
+              <button class="btn-activity">...</button>
+            </div>
+            <div class="card__hours">
+              <h2 class="card-title">32hrs</h2>
+              <p class="card-previous">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--play">
+          <div class="card__content">
+            <div class="card__activity">
+              <p class="card__activity-title">Play</p>
+              <button class="btn-activity">...</button>
+            </div>
+            <div class="card__hours">
+              <h2 class="card-title">10hrs</h2>
+              <p class="card-previous">Last Week - 8hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--study">
+          <div class="card__content">
+            <div class="card__activity">
+              <p class="card__activity-title">Study</p>
+              <button class="btn-activity">...</button>
+            </div>
+            <div class="card__hours">
+              <h2 class="card-title">4hrs</h2>
+              <p class="card-previous">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--exercise">
+          <div class="card__content">
+            <div class="card__activity">
+              <p class="card__activity-title">Exercise</p>
+              <button class="btn-activity">...</button>
+            </div>
+            <div class="card__hours">
+              <h2 class="card-title">4hrs</h2>
+              <p class="card-previous">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--social">
+          <div class="card__content">
+            <div class="card__activity">
+              <p class="card__activity-title">Social</p>
+              <button class="btn-activity">...</button>
+            </div>
+            <div class="card__hours">
+              <h2 class="card-title">5hrs</h2>
+              <p class="card-previous">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--self-care">
+          <div class="card__content">
+            <div class="card__activity">
+              <p class="card__activity-title">Self Care</p>
+              <button class="btn-activity">...</button>
+            </div>
+            <div class="card__hours">
+              <h2 class="card-title">2hrs</h2>
+              <p class="card-previous">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution" style="display: none">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
