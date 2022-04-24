@@ -21,6 +21,7 @@ body {
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -213,6 +214,15 @@ img {
   background-image: url('./images/icon-self-care.svg');
   background-repeat: no-repeat;
   background-position-x: right;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block-start: 5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media screen and (max-width: 980px) {
