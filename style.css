@@ -18,6 +18,11 @@ body {
   font-size: 1.8rem;
   background-color: hsl(226, 43%, 10%);
   color: white;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -27,4 +32,274 @@ img {
 .container {
   width: min(1140px, 100% - 2rem);
   margin-inline: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.person-card,
+.card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 1.5rem;
+}
+
+.person-card {
+  grid-row: 1 / 3;
+  /* padding: 3.5rem 4.5rem; */
+  min-height: 520px;
+}
+
+.person-card__intro {
+  height: 70%;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 1.5rem;
+
+  padding-block-start: 3.5rem;
+  padding-inline: 4.5rem;
+}
+
+.person-img {
+  background-image: url('./images/image-jeremy.png');
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 3px solid white;
+
+  margin-block-end: 4rem;
+}
+
+.person-card__subtitle {
+  font-size: 1.5rem;
+  color: hsl(236, 100%, 87%);
+
+  margin-block-end: 0.25rem;
+}
+
+.card-title {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.person-card__select {
+  list-style: none;
+  color: hsl(235, 45%, 61%);
+
+  padding-inline: 4.5rem;
+  padding-block-start: 2rem;
+}
+
+.person-card__option {
+  margin-block-end: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.person-card__option:last-child {
+  margin-block-end: 0;
+}
+
+.person-card__option:hover {
+  color: white;
+}
+
+.person-card__option--active {
+  color: white;
+}
+
+/* CARDS */
+.card {
+  /* display: flex; */
+  padding-block-start: 4rem;
+}
+
+.card__content {
+  /* align-self: flex-end; */
+  background-color: hsl(235, 46%, 20%);
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  padding-inline: 4.5rem;
+  padding-block-start: 1.5rem;
+}
+
+.card__content:hover {
+  background-color: #2a2e6f;
+}
+
+.card__activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-block-end: 3rem;
+}
+
+.card__activity-title {
+  font-weight: 500;
+}
+
+.btn-activity {
+  font: inherit;
+  font-weight: 500;
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: hsl(236, 100%, 87%);
+  transition: all 0.2s;
+}
+
+.btn-activity:hover {
+  color: white;
+}
+
+.card__hours > .card-title {
+  font-size: 5rem;
+
+  margin-block-end: 1.5rem;
+}
+
+.card-previous {
+  color: hsl(236, 100%, 87%);
+  font-size: 1.5rem;
+}
+
+.card--work {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url('./images/icon-work.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.card--play {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url('./images/icon-play.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.card--study {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url('./images/icon-study.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.card--exercise {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url('./images/icon-exercise.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.card--social {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url('./images/icon-social.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.card--self-care {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url('./images/icon-self-care.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    display: block;
+  }
+
+  .container {
+    padding-block: 3rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .person-card {
+    grid-row: auto;
+    height: auto;
+  }
+
+  .card__activity {
+    margin-block-end: 0.75rem;
+  }
+
+  .card__activity-title {
+    font-size: 1.6rem;
+  }
+
+  .card__hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card__hours > .card-title {
+    margin-block-end: 0;
+    font-size: 3.5rem;
+  }
+
+  .card__content {
+    padding-block-end: 1.5rem;
+    padding-inline: 2.5rem;
+  }
+
+  .person-card__intro {
+    height: auto;
+    padding-inline: 2.5rem;
+    padding-block-end: 3.5rem;
+  }
+
+  .person-card__bundle {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+
+  .person-img {
+    margin-block-end: 0;
+    margin-inline-end: 2rem;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .person-card {
+    min-height: auto;
+  }
+
+  .person-card__select {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2.5rem;
+    padding-block-end: 2rem;
+  }
+
+  .person-card__option {
+    margin-block-end: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .person-img {
+    margin-inline-end: 0;
+  }
+
+  .person-card__bundle {
+    justify-content: space-between;
+  }
 }

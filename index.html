@@ -15,7 +15,7 @@
     <title>Frontend Mentor | Time tracking dashboard</title>
 
     <link rel="stylesheet" href="style.css" />
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script defer src="script.js"></script>
     <style>
       .attribution {
         font-size: 11px;
@@ -31,16 +31,23 @@
       <div class="grid-container">
         <div class="person-card">
           <div class="person-card__intro">
-            <img src="./images/image-jeremy.png" alt="Person avatar" />
-            <p class="person-card__subtitle">Report for</p>
-            <h2 class="card-title">Jeremy Robson</h2>
+            <div class="person-card__bundle">
+              <div class="person-img"></div>
+              <div class="person-report">
+                <p class="person-card__subtitle">Report for</p>
+                <h2 class="card-title">Jeremy Robson</h2>
+              </div>
+            </div>
           </div>
           <ul class="person-card__select">
-            <li class="person-card__option">Daily</li>
-            <li class="person-card__option person-card__option--active">
+            <li class="person-card__option" data-option="daily">Daily</li>
+            <li
+              class="person-card__option person-card__option--active"
+              data-option="weekly"
+            >
               Weekly
             </li>
-            <li class="person-card__option">Monthly</li>
+            <li class="person-card__option" data-option="monthly">Monthly</li>
           </ul>
         </div>
         <div class="card card--work">
@@ -50,8 +57,12 @@
               <button class="btn-activity">...</button>
             </div>
             <div class="card__hours">
-              <h2 class="card-title">32hrs</h2>
-              <p class="card-previous">Last Week - 36hrs</p>
+              <h2 class="card-title">
+                <span class="hours-current">32</span>hrs
+              </h2>
+              <p class="card-previous">
+                Last Week - <span class="hours-previous">36</span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -62,8 +73,12 @@
               <button class="btn-activity">...</button>
             </div>
             <div class="card__hours">
-              <h2 class="card-title">10hrs</h2>
-              <p class="card-previous">Last Week - 8hrs</p>
+              <h2 class="card-title">
+                <span class="hours-current">10</span>hrs
+              </h2>
+              <p class="card-previous">
+                Last Week - <span class="hours-previous">8</span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -74,8 +89,12 @@
               <button class="btn-activity">...</button>
             </div>
             <div class="card__hours">
-              <h2 class="card-title">4hrs</h2>
-              <p class="card-previous">Last Week - 7hrs</p>
+              <h2 class="card-title">
+                <span class="hours-current">4</span>hrs
+              </h2>
+              <p class="card-previous">
+                Last Week - <span class="hours-previous">7</span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -86,8 +105,12 @@
               <button class="btn-activity">...</button>
             </div>
             <div class="card__hours">
-              <h2 class="card-title">4hrs</h2>
-              <p class="card-previous">Last Week - 5hrs</p>
+              <h2 class="card-title">
+                <span class="hours-current">4</span>hrs
+              </h2>
+              <p class="card-previous">
+                Last Week - <span class="hours-previous">5</span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -98,8 +121,12 @@
               <button class="btn-activity">...</button>
             </div>
             <div class="card__hours">
-              <h2 class="card-title">5hrs</h2>
-              <p class="card-previous">Last Week - 10hrs</p>
+              <h2 class="card-title">
+                <span class="hours-current">5</span>hrs
+              </h2>
+              <p class="card-previous">
+                Last Week - <span class="hours-previous">10</span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -110,8 +137,12 @@
               <button class="btn-activity">...</button>
             </div>
             <div class="card__hours">
-              <h2 class="card-title">2hrs</h2>
-              <p class="card-previous">Last Week - 2hrs</p>
+              <h2 class="card-title">
+                <span class="hours-current">2</span>hrs
+              </h2>
+              <p class="card-previous">
+                Last Week - <span class="hours-previous">2</span>hrs
+              </p>
             </div>
           </div>
         </div>
